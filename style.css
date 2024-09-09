@@ -1,0 +1,139 @@
+/* CSS RESET */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body,h1,h2,h3,h4,p{
+    margin: 0;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: pretty;
+}
+
+ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* CSS Variable */
+:root{
+    /* Colors */
+    --clr--white: hsl(0, 0%, 100%);
+    --clr--s100: hsl(30, 54%, 90%);
+    --clr--s150: hsl(30, 18%, 87%);
+    --clr--s600: hsl(30, 10%, 34%);
+    --clr--s900: hsl(24, 5%, 18%);
+    --clr--brown: hsl(14, 45%, 36%);
+    --clr--r800: hsl(332, 51%, 32%);
+    --clr--r50: hsl(330, 100%, 98%);
+
+    /* Font */
+    --ff-outfit: 'Outfit', sans-serif;
+    --ff-young-serif: 'Young Serif', serif;
+}
+
+/* Style */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--clr--s100);
+    min-height: 100svh;
+    font-family: var(--ff-outfit);
+    line-height: 1.5;
+}
+.recipe-container{
+    background-color: var(--clr--white);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 40rem;
+}
+.recipe-container>*+*{
+    margin-top: 1.5rem;
+}
+.header-img{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.main-tile h1{
+    font-family: var(--ff-young-serif);
+    font-weight: 400;
+}
+.main-tile p{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.time-container{
+    background-color: var(--clr--r50);
+    padding: 2rem;
+}
+.time-container h2{
+    color: var(--clr--r800);
+    margin-bottom: 1rem;
+}
+.time-lists{
+    padding-inline-start: 2em;
+    text-indent: 1rem;
+    
+}
+.time-lists > li+li{
+    margin-top: 1rem;
+}
+.time-lists li::marker{
+    color: var(--clr--r800);
+}
+.ingredient-container h1,
+.instruction-container h1{
+    font-family: var(--ff-young-serif);
+    color: var(--clr--brown);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.ingredient-lists,
+.instruction-lists{
+    padding: 0 1.5rem;
+    /* text-indent: 1rem; */
+}
+.ingredient-lists>li+li,
+.instruction-lists>li+li{
+    margin-top: 1rem;
+}
+.ingredient-lists li::marker,
+.instruction-lists li::marker{
+    color: var(--clr--brown);
+}
+.instruction-lists li::marker{
+    font-weight: 600;
+}
+.instruction-lists strong{
+    color: var(--clr--s600);
+}
+.ingredient-container::after{
+    content: ' ';
+    display: block;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 2rem;
+}
