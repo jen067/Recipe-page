@@ -53,6 +53,9 @@ picture {
 }
 
 /* UTILITIES */
+p{
+    color: var(--clr--s600);
+}
 .flow>*+*{
     margin-top: .8rem;
 }
@@ -154,7 +157,7 @@ main{
 }
 .nutrition-table-row td{
     padding: .8rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--clr--s150);
 }
 
 .nutrition-table-row:last-child td{
@@ -171,6 +174,6 @@ main{
     content: ' ';
     display: block;
     height: 1px;
-    background-color: #ccc;
+    background-color: var(--clr--s150);
     margin-top: 2rem;
 }
