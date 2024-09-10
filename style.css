@@ -105,7 +105,8 @@ body{
     color: var(--clr--r800);
 }
 .ingredient-container h1,
-.instruction-container h1{
+.instruction-container h1,
+.nutrition-container h1{
     font-family: var(--ff-young-serif);
     color: var(--clr--brown);
     font-weight: 400;
@@ -130,10 +131,26 @@ body{
 .instruction-lists strong{
     color: var(--clr--s600);
 }
-.ingredient-container::after{
+.ingredient-container::after,
+.instruction-container::after{
     content: ' ';
     display: block;
     height: 1px;
     background-color: #ccc;
     margin-top: 2rem;
+}
+.nutrition__table{
+    margin-top: 1rem;
+    width: 100%;
+}
+.nutrition__table__row__value{
+    color: var(--clr--brown);
+    font-weight: 700;
+}
+.nutrition__table td{
+    padding: .8rem;
+    border-bottom: 1px solid #ccc;
+}
+.nutrition__table .nutrition__table__row:last-child td{
+    border-bottom: none;
 }
